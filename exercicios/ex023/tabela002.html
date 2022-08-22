@@ -26,20 +26,41 @@
          }
          
         table { 
+            position: relative;
             width: 500px;
             border-collapse: collapse;
             margin: auto;
         }
 
-        td,th { 
+        td { 
             border: 1px solid black;
             padding: 10px;
             
         }
 
+        th {
+            border: 1px solid black;
+            padding: 10px;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.514);
+        }
+
         thead,tfoot { 
             background-color: gray;
             color: white;
+        }
+
+        thead > tr > th { 
+            background-color: gray;
+            position: sticky;
+            top: -1px;
+        }
+
+        /* 
+           odd = ímpar / 2n-1
+           even = par / 2n
+        */
+        tbody > tr:nth-child(2n) { 
+            background-color: lightgray;
         }
     </style>
 </head>
@@ -177,7 +198,7 @@
         <tfoot>
              <tr>
                 <th scope="row">Total de Habitantes</th>
-                <td class="num"><strong>210.147.125</strong></td>
+                <td class="num" style="text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.651);"><strong>210.147.125</strong></td>
              </tr>
         </tfoot>
     </table>
