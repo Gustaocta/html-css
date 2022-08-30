@@ -5,8 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkbox e Radio button</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        h1 { 
+            text-align: center;
+            padding: 40px;
+        }
+
+        input { 
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+
+        .botao { 
+            text-align: center;
+        }
+
+        fieldset { 
+            padding-bottom: 10px;
+            margin:auto;
+            width: 600px;
+        }
+
+        #genero { 
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>
+        Checkbox e Radio button
+    </h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <fieldset id="genero">
+            <legend> Sexo </legend>
+            <input type="radio" name="sexo" id="isxmas" value="M"> <label for="isxmas"> Masculino </label>
+            <input type="radio" name="sexo" id="isxfem" value="F" checked> <label for="isxfem"> Feminino </label>
+        </fieldset>
+        <fieldset>
+            <legend>Esportes Favoritos</legend>
+            <input type="checkbox" name="esbas" id="iesbas"> <label for="iesbas"> Basquete </label>
+            <input type="checkbox" name="esfut" id="iesfut"> <label for="iesfut"> Futebol </label>
+            <input type="checkbox" name="esnat" id="iesnat"> <label for="iesnat"> Natação </label>
+            <input type="checkbox" name="esten" id="iesten"> <label for="iesten"> Tênis </label>
+        </fieldset>
+
+        <p>
+            <input class="botao" type="submit" value="Enviar">
+            <input class="botao" type="reset" value="Limpar">
+        </p>
+    </form>
 </body>
 </html>
